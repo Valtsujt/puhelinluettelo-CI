@@ -3,7 +3,7 @@ module.exports = {
         'commonjs': true,
         'es2021': true,
         'node': true,
-        'jest/globals': true,
+        'cypress/globals': true
     },
     'extends': [
         'eslint:recommended',
@@ -16,7 +16,7 @@ module.exports = {
         'ecmaVersion': 12
     },
     'plugins': [
-        'react',"jest"
+        'react','cypress'
     ],
     'rules': {
         'indent': [
