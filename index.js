@@ -107,7 +107,7 @@ app.get('/health', (req, res) => {
     res.send('ok')
 })
 app.get('/version', (req, res) => {
-    res.send('2')
+    res.send('3')
 })
 const errorHandler = (error, request, response, next) => {
     console.error(error.message)
