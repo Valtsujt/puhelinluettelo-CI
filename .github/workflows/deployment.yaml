@@ -33,7 +33,7 @@ jobs:
           heroku_email: "valtsujt@gmail.com"
           healthcheck: "https://puhelinluettelo-ci.herokuapp.com/health"
           checkstring: "ok"
-          #rollbackonhealthcheckfailed: true
+          rollbackonhealthcheckfailed: true
       - uses: 8398a7/action-slack@v3
         if: ${{ job.status  == 'success' &&  github.event_name == 'push' && !contains(join(toJson(github.event.commits.*.message), ', '), '#skip') }}
         with:
