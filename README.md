@@ -1,1 +1,1 @@
-https://tim-syrup-31134.herokuapp.com/
+https://puhelinluettelo-ci.herokuapp.com/
