@@ -34,6 +34,7 @@ jobs:
           healthcheck: "https://puhelinluettelo-ci.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
+          delay: 5
       - uses: 8398a7/action-slack@v3
         if: ${{ job.status  == 'success' &&  github.event_name == 'push' && !contains(join(toJson(github.event.commits.*.message), ', '), '#skip') }}
         with:
