@@ -7,7 +7,7 @@ require('dotenv').config()
 const Person = require('./models/person')
 
 app.use(cors())
-app.use(express.static('build'))
+//app.use(express.static('build'))
 app.use(express.json())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
@@ -107,7 +107,7 @@ app.get('/health', (req, res) => {
     res.send('ok')
 })
 app.get('/version', (req, res) => {
-    res.send('1')
+    res.send('3')
 })
 const errorHandler = (error, request, response, next) => {
     console.error(error.message)
@@ -125,5 +125,5 @@ const errorHandler = (error, request, response, next) => {
 app.use(errorHandler)
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on port ${PORT}!`)
 })
